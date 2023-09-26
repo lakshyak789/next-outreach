@@ -1,150 +1,219 @@
-import Head from "next/head";
-import { Heading, Link, Text, Code, Flex, Box } from "@chakra-ui/react";
-import styles from "../styles/Home.module.css";
-import { DarkModeSwitch } from "../components/ui/DarkModeSwitch";
-
+import { Box, Text, Image, Button } from "@chakra-ui/react";
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <Heading as="h1" size="2xl" mb="2">
-          Welcome to{" "}
-          <Link color="teal.400" href="https://nextjs.org">
-            Next.js!
-          </Link>
-        </Heading>
-
-        <Text fontSize="xl" mt="2">
-          Get started by editing <Code>pages/index.js</Code>
-        </Text>
-
-        <Flex
-          flexWrap="wrap"
-          alignItems="center"
-          justifyContent="center"
-          maxW="800px"
-          mt="10"
+    <Box width="100%" bg="#f5f6f7" overflow="auto">
+      <Box
+        pr={{
+          xl: "calc((100% - 1110px) / 2)",
+          md: "90px",
+          sm: "30px",
+          base: "25px",
+        }}
+        pl={{
+          xl: "calc((100% - 1110px) / 2)",
+          md: "90px",
+          sm: "30px",
+          base: "25px",
+        }}
+        overflow="auto"
+      >
+        <Box
+          textAlign="center"
+          mt="75px"
+          float="left"
+          width="100%"
+          bg="#f5f6f7"
+          overflow="auto"
+          mb="49px"
         >
-          <Box
-            as="a"
-            href="https://nextjs.org/docs"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
+          <Text
+            fontSize="1.875em"
+            mb="10px"
+            fontFamily="FedraSansCondensedMedium"
           >
-            <Heading as="h3" size="lg" mb="2">
-              Documentation &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Find in-depth information about Next.js features and API.
-            </Text>
-          </Box>
+            What You Can Do
+          </Text>
+          <Image
+            display="inline-block"
+            src="https://static.ishaoutreach.org/static/assets/cauvery-calling/img/blue-divider.svg"
+          ></Image>
+        </Box>
+        <Box overflow="auto" height="100%" w="100%" textAlign="center">
+          <Box
+            width={{
+              lg: "calc((100% - 70px) / 3)",
+              sm: "calc((100% - 29px) / 2)",
+              base: "100%",
+            }}
+            mr={{ lg: "30px", sm: "29px" }}
+            mb="30px"
+            minH="400px"
+            textAlign="center"
+            boxShadow="0 6px 18px 0 rgba(0,0,0,.03)"
+            display="inline-block"
+            float="left"
+            padding="25px"
+            bg="#fff"
+          >
+            <Image
+              borderRadius="100%"
+              boxSize="124px"
+              src="https://static.ishaoutreach.org/d-124x124/isha-outreach-images/2019-08/PGH_Donate_20110214_NEE_0040-e_1.jpg"
+              alt="Dan Abramov"
+              marginBottom="28px"
+              display="inline-block"
+            />
 
-          <Box
-            as="a"
-            href="https://nextjs.org/learn"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
-          >
-            <Heading as="h3" size="lg" mb="2">
-              Learn &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Learn about Next.js in an interactive course with quizzes!
+            <Text
+              mb="20px"
+              fontFamily="FedraSansCondensedMedium, sans-serif"
+              color="#000"
+              fontSize="1em"
+            >
+              Action Now
             </Text>
-          </Box>
-
-          <Box
-            as="a"
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
-          >
-            <Heading as="h3" size="lg" mb="2">
-              Examples &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Discover and deploy boilerplate example Next.js projects.
+            <Text
+              mb="20px"
+              color="#4d4d4d"
+              fontFamily="FedraSansCondStdBook, sans-serif"
+              fontSize="1em"
+              minHeight="92px"
+            >
+              Support farmers to plant trees. Make your contribution to save
+              Cauvery.
             </Text>
-          </Box>
-
-          <Box
-            as="a"
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
-          >
-            <Heading as="h3" size="lg" mb="2">
-              Deploy &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </Text>
-          </Box>
-
-          <Box
-            as="a"
-            href="https://chakra-ui.com/"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
-          >
-            <Heading as="h3" size="lg" mb="2">
-              Chakra UI &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Build accessible React apps & websites with speed.
-            </Text>
+            <Button
+              bg="#d04b02"
+              color="#fff"
+              fontFamily="FedraSansCondensedMedium"
+              fontSize="16px"
+              borderRadius="5px"
+              width="100%"
+              padding="12px 0"
+              cursor="pointer"
+              _hover={{
+                bg: "#d04b02",
+              }}
+            >
+              DONATE
+            </Button>
           </Box>
           <Box
-            as="a"
-            href="https://openchakra.app/"
-            p="6"
-            m="4"
-            borderWidth="1px"
-            rounded="lg"
-            flexBasis={["auto", "45%"]}
+            width={{
+              lg: "calc((100% - 70px) / 3)",
+              sm: "calc((100% - 29px) / 2)",
+              base: "100%",
+            }}
+            mr={{ lg: "30px", md: "0" }}
+            mb="30px"
+            minH="400px"
+            textAlign="center"
+            boxShadow="0 6px 18px 0 rgba(0,0,0,.03)"
+            display="inline-block"
+            float="left"
+            padding="25px"
+            bg="#fff"
           >
-            <Heading as="h3" size="lg" mb="2">
-              OpenChakra &rarr;
-            </Heading>
-            <Text fontSize="lg">
-              Design and Build faster with visual editor for React based on
-              Chakra UI.
+            <Image
+              borderRadius="100%"
+              boxSize="124px"
+              src="https://static.ishaoutreach.org/d-124x124/isha-outreach-images/2019-08/START-campaign20170903_HKS_1417-e.jpg"
+              alt="Dan Abramov"
+              mb="28px"
+              display="inline-block"
+            />
+            <Text
+              mb="20px"
+              fontFamily="FedraSansCondensedMedium, sans-serif"
+              color="#000"
+              fontSize="1em"
+            >
+              Start a campaign
             </Text>
+            <Text
+              mb="20px"
+              color="#4d4d4d"
+              fontFamily="FedraSansCondStdBook, sans-serif"
+              fontSize="1em"
+              minHeight="92px"
+            >
+              Tell the world that you want to make a difference by starting your
+              own campaign.
+            </Text>
+            <Button
+              bg="#0b0c7c"
+              color="#fff"
+              fontFamily="FedraSansCondensedMedium"
+              fontSize="16px"
+              borderRadius="5px"
+              width="100%"
+              cursor="pointer"
+              padding="12px 0"
+              _hover={{
+                bg: "#000056",
+              }}
+            >
+              GET STARTED
+            </Button>
           </Box>
-        </Flex>
-      </main>
-
-      <DarkModeSwitch />
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+          <Box
+            width={{
+              lg: "calc((100% - 70px) / 3)",
+              sm: "calc((100% - 29px) / 2)",
+              base: "100%",
+            }}
+            mb="30px"
+            minH="400px"
+            textAlign="center"
+            boxShadow="0 6px 18px 0 rgba(0,0,0,.03)"
+            padding="25px"
+            display="inline-block"
+            float={{ lg: "left", base: "none" }}
+            bg="#fff"
+          >
+            <Image
+              borderRadius="100%"
+              boxSize="124px"
+              src="https://static.ishaoutreach.org/d-124x124/isha-outreach-images/2019-08/PGH_Volunteer_20120817_SLH_0040-e_1.jpg"
+              alt="Dan Abramov"
+              mb="28px"
+              display="inline-block"
+            />
+            <Text
+              mb="20px"
+              fontFamily="FedraSansCondensedMedium, sans-serif"
+              color="#000"
+              fontSize="1em"
+            >
+              Volunteer
+            </Text>
+            <Text
+              mb="20px"
+              color="#4d4d4d"
+              fontFamily="FedraSansCondStdBook, sans-serif"
+              fontSize="1em"
+              minHeight="92px"
+            >
+              Support us in awareness generation, at events and more.
+            </Text>
+            <Button
+              bg="#0b0c7c"
+              color="#fff"
+              fontFamily="FedraSansCondensedMedium"
+              fontSize="16px"
+              borderRadius="5px"
+              width="100%"
+              padding="12px 0"
+              cursor="pointer"
+              _hover={{
+                bg: "#000056",
+              }}
+            >
+              REGISTER
+            </Button>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }

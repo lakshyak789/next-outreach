@@ -10,7 +10,41 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.container {
+  padding-right: calc((100% - 1110px) / 2);
+  padding-left: calc((100% - 1110px) / 2);
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    padding-right: 90px;
+    padding-left: 90px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "FedraSansCondStdBook";
+  src: url("../public/fonts/Fedra-Sans-Std-Book.ttf");
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FedraSansCondensedMedium";
+  src: url("../public/fonts/Fedra-Sans-Std-Medium.ttf");
+
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
